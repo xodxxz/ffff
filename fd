@@ -15,7 +15,7 @@ local Mouse = LocalPlayer:GetMouse()
 -- // Silent Aim Vars
 getgenv().ValiantAimHacks = {
     SilentAimEnabled = true,
-    ShowFOV = false,
+    ShowFOV = true,
     VisibleCheck = true,
     TeamCheck = true,
     FOV = 23.6,
@@ -34,7 +34,7 @@ getgenv().ValiantAimHacks = {
 
 -- // Show FOV
 local circle = Drawing.new("Circle")
-circle.Transparency = 0.5
+circle.Transparency = 0
 circle.Thickness = 2
 circle.Color = Color3.fromRGB(231, 84, 128)
 circle.NumSides = 12
