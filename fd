@@ -34,11 +34,11 @@ getgenv().ValiantAimHacks = {
 
 -- // Show FOV
 local circle = Drawing.new("Circle")
-circle.Transparency = 1
+circle.Transparency = 0
 circle.Thickness = 2
 circle.Color = Color3.fromRGB(231, 84, 128)
 circle.NumSides = 12
-circle.Filled = true
+circle.Filled = false
 function ValiantAimHacks.updateCircle()
     if (circle) then
         -- // Set Circle Properties
