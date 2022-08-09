@@ -18,10 +18,10 @@ getgenv().ValiantAimHacks = {
     ShowFOV = true,
     VisibleCheck = true,
     TeamCheck = true,
-    FOV = 16.6,
-    HitChance = 100,
+    FOV = 17,
+    HitChance = 110,
     Selected = LocalPlayer,
-    TargetPart = {"Head", "HumanoidRootPart"},
+    TargetPart = "Head",
     BlacklistedTeams = {
         {
             Team = LocalPlayer.Team,
@@ -34,17 +34,16 @@ getgenv().ValiantAimHacks = {
 
 -- // Show FOV
 local circle = Drawing.new("Circle")
-circle.Transparency = 1
+circle.Transparency = 0.5
 circle.Thickness = 2
 circle.Color = Color3.fromRGB(75, 0, 130)
 circle.NumSides = 12
-circle.Filled = false
+circle.Filled = true
 function ValiantAimHacks.updateCircle()
     if (circle) then
         -- // Set Circle Properties
         circle.Visible = ValiantAimHacks.ShowFOV
         circle.Radius = (ValiantAimHacks.FOV * 3)
-        circle.Position = Vector2.new(Mouse.X, Mouse.Y + GuiService:GetGuiInset().Y)
 
         -- // Return circle
         return circle
